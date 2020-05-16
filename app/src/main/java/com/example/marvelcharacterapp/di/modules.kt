@@ -15,7 +15,7 @@ val viewModelModule = module {
 
     single { MarvelRepository() }
     viewModel { CharacterListViewModel(get()) }
-    viewModel { CharacterDetailViewModel() }
+    viewModel { CharacterDetailViewModel(get()) }
 
 
 }

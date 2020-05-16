@@ -7,7 +7,9 @@ import kotlinx.android.parcel.Parcelize
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Parcelize
-data class Thumbnail (
-	@SerializedName("path") val path : String,
-	@SerializedName("extension") val extension : String
+data class Comic (
+	@SerializedName("id") val id : Int,
+	@SerializedName("title") val title : String,
+	@SerializedName("description") val description : String,
+	@SerializedName("thumbnail") val thumbnail : Thumbnail
 ): Parcelable

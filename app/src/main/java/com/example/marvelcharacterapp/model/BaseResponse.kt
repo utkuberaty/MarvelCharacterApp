@@ -1,9 +1,9 @@
 package com.example.marvelcharacterapp.model
 
-import android.os.Parcelable
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class BaseResponse<T> (
 
     @SerializedName("code") val code : String,

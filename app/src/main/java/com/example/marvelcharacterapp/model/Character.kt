@@ -1,21 +1,16 @@
 package com.example.marvelcharacterapp.model
 
 import android.os.Parcelable
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Parcelize
 data class Character (
 
     @SerializedName("id") val id : String,
     @SerializedName("name") val name : String,
     @SerializedName("description") val description : String,
-    @SerializedName("modified") val modified : String,
-    @SerializedName("resourceURI") val resourceURI : String,
-    @SerializedName("urls") val urls : List<Urls>,
-    @SerializedName("thumbnail") val thumbnail : Thumbnail,
-    @SerializedName("comics") val comics : Comics,
-    @SerializedName("stories") val stories : Stories,
-    @SerializedName("events") val events : Events,
-    @SerializedName("series") val series : Series
+    @SerializedName("thumbnail") val thumbnail : Thumbnail
 ): Parcelable

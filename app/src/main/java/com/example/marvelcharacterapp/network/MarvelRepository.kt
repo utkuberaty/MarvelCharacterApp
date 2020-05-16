@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.paging.PageKeyedDataSource
 import com.example.marvelcharacterapp.model.BaseResponse
 import com.example.marvelcharacterapp.model.Character
+import com.example.marvelcharacterapp.model.Comic
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 import retrofit2.Call
@@ -36,7 +37,6 @@ class MarvelRepository: KoinComponent {
             HASH to retrofitService.md5(timeInMillis + MARVEL_PRIVATE_KEY + MARVEL_PUBLIC_KEY)
         )
     }
-//    @Query("apiKey") ,@Query("limit") limit: Int, @Query("offset") offset: Int
 
     fun getCharacterList(serviceCallListener: ServiceCallListener<List<Character>, Throwable>, offset: Int){
         val queryMap = mapOf("limit" to List_Page_Limit, "offset" to  offset )
@@ -52,6 +52,22 @@ class MarvelRepository: KoinComponent {
                 Log.i("getCharacterList", " response is ${response.body()}")
                 Log.i("getCharacterList", " response is ${response.message()}")
 
+                serviceCallListener.success?.invoke(response.body()?.data?.results)
+            }
+        })
+    }
+
+    fun getCharacterComicList(serviceCallListener: ServiceCallListener<List<Comic>, Throwable>, characterId: String) {
+        marvelApi.getCharacterComics(characterId, authQueryMap).enqueue(object: Callback<BaseResponse<Comic>?> {
+            override fun onFailure(call: Call<BaseResponse<Comic>?>, t: Throwable) {
+                serviceCallListener.failure?.invoke(t)
+            }
+
+            override fun onResponse(
+                call: Call<BaseResponse<Comic>?>,
+                response: Response<BaseResponse<Comic>?>
+            ) {
+                Log.i("getCharacterComicList", " body is ${response.body()}")
                 serviceCallListener.success?.invoke(response.body()?.data?.results)
             }
         })

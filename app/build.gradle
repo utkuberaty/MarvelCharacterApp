@@ -73,4 +73,7 @@ dependencies {
     implementation "org.koin:koin-androidx-scope:$koin_version" // for Android Scope features
     implementation "org.koin:koin-androidx-viewmodel:$koin_version" // Android ViewModel features
     testApi "org.koin:koin-test:$koin_version" // for Unit tests
+
+    //Paper
+    implementation 'io.paperdb:paperdb:2.6'
 }

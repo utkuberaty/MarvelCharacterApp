@@ -15,7 +15,7 @@ import org.koin.core.parameter.ParametersDefinition
 import org.koin.core.qualifier.Qualifier
 import java.lang.reflect.ParameterizedType
 
-abstract class BaseFragment<VM: ViewModel> : Fragment() {
+abstract class BaseFragment<VM: ViewModel> : Fragment(), OnBackPressListener {
 
     private val TAG = this::class.java.simpleName
 
@@ -65,4 +65,13 @@ abstract class BaseFragment<VM: ViewModel> : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
     }
+
+    override fun onBackPress() {
+        parentFragmentManager.fragments.forEach {
+            Log.i(TAG, "onBackPress() fragments ${it::class.java.simpleName}")
+        }
+        parentFragmentManager.popBackStack()
+    }
 }
+
+interface OnBackPressListener{ fun onBackPress() }
