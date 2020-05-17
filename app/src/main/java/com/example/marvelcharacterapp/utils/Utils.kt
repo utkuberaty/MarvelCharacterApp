@@ -1,4 +1,4 @@
-package com.example.marvelcharacterapp
+package com.example.marvelcharacterapp.utils
 
 import com.example.marvelcharacterapp.model.Character
 import io.paperdb.Paper

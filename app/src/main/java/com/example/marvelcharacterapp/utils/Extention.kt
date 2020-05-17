@@ -1,8 +1,8 @@
-package com.example.marvelcharacterapp
+package com.example.marvelcharacterapp.utils
 
 import android.widget.ImageView
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.character_item.view.*
+import com.example.marvelcharacterapp.MarvelApplication
 
 val Any.TAG: String
     get() = javaClass.simpleName

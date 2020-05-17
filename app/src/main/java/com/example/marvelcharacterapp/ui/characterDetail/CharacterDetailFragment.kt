@@ -7,7 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.marvelcharacterapp.base.BaseFragment
 import com.example.marvelcharacterapp.R
-import com.example.marvelcharacterapp.loadURL
+import com.example.marvelcharacterapp.utils.loadURL
 import com.example.marvelcharacterapp.model.Comic
 import kotlinx.android.synthetic.main.character_detail_fragment.*
 

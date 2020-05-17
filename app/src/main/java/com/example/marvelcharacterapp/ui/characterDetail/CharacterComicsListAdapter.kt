@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvelcharacterapp.R
-import com.example.marvelcharacterapp.loadURL
+import com.example.marvelcharacterapp.utils.loadURL
 import com.example.marvelcharacterapp.model.Comic
 import kotlinx.android.synthetic.main.character_item.view.*
 

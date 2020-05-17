@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "512502976825",
+    "firebase_url": "https://marvelcharacterapp.firebaseio.com",
+    "project_id": "marvelcharacterapp",
+    "storage_bucket": "marvelcharacterapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512502976825:android:81524d68bb7691802b98e8",
+        "android_client_info": {
+          "package_name": "com.example.marvelcharacterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512502976825-67hdt5apvgdhpnbl5jffdd9tsmcuuagf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD0_7Pu2Ef6XBtP0CGCeiptPKNbocX07s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512502976825-67hdt5apvgdhpnbl5jffdd9tsmcuuagf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -3,6 +3,7 @@ package com.example.marvelcharacterapp
 import android.app.Application
 import com.example.marvelcharacterapp.di.networkModule
 import com.example.marvelcharacterapp.di.viewModelModule
+import com.google.firebase.analytics.FirebaseAnalytics
 import io.paperdb.Paper
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
