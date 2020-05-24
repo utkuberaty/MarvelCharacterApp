@@ -12,8 +12,8 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
-const val MARVEL_PUBLIC_KEY = "50c169f4c5337f36f5eeeb2c941d1d06"
-const val MARVEL_PRIVATE_KEY = "ffaa7d2cbd1a67134af8fe101e390c7eb9efb9aa"
+const val MARVEL_PUBLIC_KEY = "write you marvel public key"
+const val MARVEL_PRIVATE_KEY = "write you marvel private key"
 const val API_KEY= "apikey"
 const val TIME = "ts"
 const val HASH = "hash"
